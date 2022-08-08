@@ -1,0 +1,6 @@
+database:
+    http://3.19.59.189/index.php
+    username - root
+    pass - Bleach@123
+postman collection:
+    https://www.getpostman.com/collections/d4ff34bc78db4ef5f4a2
