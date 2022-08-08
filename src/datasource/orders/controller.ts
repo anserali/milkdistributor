@@ -10,8 +10,11 @@ class Controler {
                 let checkMilkCapacityQuery = queryhelper.checkMilkCapacity(date)
                 let checkMilkCapacityResponse =
                     await Utility.queryExecutor(checkMilkCapacityQuery, "Check Milk Capacity")
+                if (checkMilkCapacityResponse.length == 0) {
+                    return resolve({ status: "failure", message: "No Data Found!!!" })
+                }
                 let milkCapacity = checkMilkCapacityResponse[0].milkLeft
-                return resolve(milkCapacity)
+                return resolve({ status: "success", milkLeft: milkCapacity })
             } catch (error) {
                 return reject(error)
             }

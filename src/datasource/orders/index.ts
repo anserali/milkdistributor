@@ -18,7 +18,7 @@ class Orders {
         }
         let finalResponse = await controller.checkMilkCapacity(date)
 
-        return res.send({ status: "success", milkLeft: finalResponse });
+        return res.send(finalResponse);
       } catch (error) {
         logger.log("error", error)
         return res.send({ status: "failure", message: "Internal Server Error!!!" })
