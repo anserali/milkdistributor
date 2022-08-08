@@ -34,7 +34,7 @@ new CronJob(
   "Asia/Kolkata"
 );
 
-app.use("/", dataSourceRoutes);
+app.use("/api", dataSourceRoutes);
 
 app.get("/*", (req, res) => {
   return res.send({ status: "failure", message: "404 Page Not Found!!!" });
