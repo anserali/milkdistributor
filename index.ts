@@ -44,3 +44,4 @@ let server = app.listen(PORT, function () {
   var { address, port } = server.address() as AddressInfo;
   logger.log("debug", "running at http://" + address + ":" + port);
 });
+
