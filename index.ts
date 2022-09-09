@@ -37,7 +37,7 @@ new CronJob(
 app.use("/api", dataSourceRoutes);
 
 app.get("/*", (req, res) => {
-  return res.send({ status: "failure", message: "404 manual!!!" });
+  return res.send({ status: "failure", message: "404 reverted permission!!!" });
 });
 console.log(environment);
 let server = app.listen(PORT, function () {
